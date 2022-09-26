@@ -7,6 +7,6 @@ class Pages extends BaseController
     public function index()
     {
         // return view('welcome_message');
-        echo "hello world!";
+        return view('home');
     }
 }
