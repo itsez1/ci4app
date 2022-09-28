@@ -6,7 +6,26 @@ class Pages extends BaseController
 {
     public function index()
     {
+
+        $data = [
+            'title' => 'Home | Web programing unpas'
+        ];
         // return view('welcome_message');
-        return view('home');
+        echo view('layout/header', $data);
+        echo view('pages/home');
+        echo view('layout/footer');
+    }
+
+
+    public function about()
+    {
+
+        $data = [
+            'title' => 'About Me'
+        ];
+        // return view('welcome_message');
+        echo view('layout/header', $data);
+        echo view('pages/about');
+        echo view('layout/footer');
     }
 }
