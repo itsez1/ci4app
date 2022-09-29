@@ -11,9 +11,7 @@ class Pages extends BaseController
             'title' => 'Home | Web programing unpas'
         ];
         // return view('welcome_message');
-        echo view('layout/header', $data);
-        echo view('pages/home');
-        echo view('layout/footer');
+        return view('pages/home', $data);
     }
 
 
@@ -24,8 +22,33 @@ class Pages extends BaseController
             'title' => 'About Me'
         ];
         // return view('welcome_message');
-        echo view('layout/header', $data);
-        echo view('pages/about');
-        echo view('layout/footer');
+
+        return view('pages/about', $data);
+    }
+
+
+
+
+    public function contact()
+    {
+
+        $data = [
+            'title' => 'Contact Us!',
+            'alamat' => [
+                [
+                    'tipe' => 'rumah',
+                    'alamat' => 'jln. abc no.123',
+                    'kota' => 'bandung'
+                ],
+                [
+                    'tipe' => 'kantor',
+                    'alamat' => 'jln. setia budi no.193',
+                    'kota' => 'bandung'
+                ]
+            ]
+        ];
+
+
+        return view('pages/contact', $data);
     }
 }
